@@ -1,0 +1,25 @@
+.card{
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.card__status--completed{
+    background-color: rgba(100, 255, 100, 0.5);
+}
+
+.card__status--pending{
+    background-color: rgba(255, 100, 100, 0.5);
+}
+
+.card__actions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}

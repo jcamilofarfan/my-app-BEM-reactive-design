@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App title='Test Driven Development / Behavior Driven Development / Domain Driven Design' />
   </React.StrictMode>
 );
 
