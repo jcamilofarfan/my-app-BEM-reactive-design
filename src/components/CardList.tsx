@@ -2,6 +2,7 @@ import "./CardList.css";
 
 import { Task } from "../interface/Tasks.interface"
 import { Card } from "./Card"
+import { Text } from "./elementos/Text";
 
 interface Props {
     task:Task[]
@@ -24,17 +25,48 @@ export const CardList = (
 
     return(
         <div className="card__list">
-            {task.map((item,index)=>{
-                return(
-                    <Card
-                        key={index}
-                        task={item}
-                        deleteTask={deleteTask}
-                        completeTask={completeTask}
-                        editTask={editTask}
+            {task.length === 0 ?
+                <div className="card__list_message">
+                    <Text 
+                        text="👆🏻👆🏻 No hay tareas, añade con el formulario de arriba 👆🏻👆🏻👆🏻"
+                        size="title"
                     />
-                )
-            })}
+                </div>
+                :
+                // div con el metodo map
+                <div className="card_list_body">
+                    {task.map((task) => (
+                        <Card
+                            key={task.id}
+                            task={task}
+                            deleteTask={deleteTask}
+                            completeTask={completeTask}
+                            editTask={editTask}
+                        />
+                    ))}
+                </div>
+            }
         </div>
     )
 }
+
+        //         <Text
+        //             text="No hay tareas"
+        //             size="title"
+        //         /> :
+        //         <div className="card__list__body">
+        //             task.map((task) => {
+        //                 return(
+        //                     <Card
+        //                         key={task.id}
+        //                         task={task}
+        //                         deleteTask={deleteTask}
+        //                         completeTask={completeTask}
+        //                         editTask={editTask}
+        //                     />
+        //                 )
+        //             }
+        //             )
+        //         </div>
+        //     }
+        // </div>

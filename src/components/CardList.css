@@ -1,9 +1,15 @@
-.card__list {
+.card__list_message {
+    margin-top: 20px;
+    text-decoration: solid underline;
+}
+
+.card_list_body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 25px;
     justify-content: center;
     align-items: center;
+    text-align: center;
     /* margin-top: 10px; */
 }
 
