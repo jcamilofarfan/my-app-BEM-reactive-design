@@ -27,7 +27,7 @@ export const CardList = (
         <div className="card__list">
             {task.length === 0 ?
                 <div className="card__list_message">
-                    <Text 
+                    <Text
                         text="👆🏻👆🏻 No hay tareas, añade con el formulario de arriba 👆🏻👆🏻👆🏻"
                         size="title"
                     />

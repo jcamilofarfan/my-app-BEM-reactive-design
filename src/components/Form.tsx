@@ -27,7 +27,7 @@ export const Form = (
     const [task, setTask] = useState(
         taskToUpdate ? taskToUpdate : initalState
     )
-     const [isEditing, setIsEditing] = useState(
+    const [isEditing, setIsEditing] = useState(
         taskToUpdate ? true : false
     )
 

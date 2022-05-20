@@ -21,12 +21,12 @@ export const Card = (
 ) => {
     return (
         <div className="card">
-            <div className={`card__content card__status--${task.isCompleted ? "completed" : "pending"}`}>
+            <div className={`card__content card__status--${task.done ? "completed" : "pending"}`}>
                 <div className="car__header">
                     <Button
                         text="Complete"
                         action={() => completeTask(task.id||0)}
-                        active={task.isCompleted}
+                        active={task.done}
                     />
                     <Text
                         text={`${task.id ? task.id : ""}`}
@@ -44,14 +44,14 @@ export const Card = (
                         <Button
                             text="Edit"
                             action= {() => { editTask(task.id||0, task) }}
-                            active={task.isCompleted}
+                            active={task.done}
                         />
                     </div>
                     <div className="card__actions--delete">
                         <Button
                             text="Delete"
                             action= {() => deleteTask(task.id||0)}
-                            active={task.isCompleted}
+                            active={task.done}
                         />
                     </div>
                 </div>
